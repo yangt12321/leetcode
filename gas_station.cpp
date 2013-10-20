@@ -14,7 +14,7 @@ public:
         int n = gas.size(), start = 0, pos = 0;  // double pointer
         int sum = gas[pos] - cost[pos];
         while((pos+1)%n != start) {
-            if(sum >= 0) sum += gas[++pos] - cost[pos];  //keep trying
+            if(sum >= 0) sum += gas[++pos] - cost[pos]; //keep trying
             else {
                 start = (start+n-1) % n;         // start pointer must step back 
                 sum += gas[start] - cost[start];
